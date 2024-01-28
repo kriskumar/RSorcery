@@ -23,7 +23,7 @@ Let us say we want to write a function to generate fibonacci sequences
 and say the next prime number given a prime number.
 We create a file with function definitions and comments.
 
-@@include[defined_functions.r](R/defined_functions.r)
+@@include[defined_function.r](R/defined_function.r)
 
 
 ``` r
