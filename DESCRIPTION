@@ -1,10 +1,10 @@
 Package: RSorcery
-Title: Magically generates functions based on decorators to function definitions.
+Title: Magically generates functions based on decorators to function definitions
 Version: 0.01
 Authors@R: 
     person("Krishna", "Kumar", , "kk2250+rsorcery@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Package generate functions automatically from comments made on top of functions.
+Description: Package generate functions automatically from comments made on top of functions
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

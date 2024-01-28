@@ -5,8 +5,9 @@
 [![R-CMD-check](https://github.com/kriskumar/RSorcery/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kriskumar/RSorcery/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of RSorcery is to help lazy R programmers who don't want to write
-functions just define them and magically generate the code.
+RSorcery is for lazy R programmers that want to use LLMs to write
+their code. Just define the function add a comment of what it does
+and magically generate the code.
 
 ## Installation
 
@@ -58,7 +59,8 @@ require(openai)
 
 Specify where your file is located. By default if an ouput file
 is not specified it creates one in the same folder with 
-_extracted.r appended to the name
+'_extracted.r' appended to the name which now contains
+the implemented function.
 
 ``` r
 
