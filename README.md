@@ -2,6 +2,7 @@
 # RSorcery
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/kriskumar/RSorcery/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kriskumar/RSorcery/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of RSorcery is to help lazy R programmers who don't want to write
