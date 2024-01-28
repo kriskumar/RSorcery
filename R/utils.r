@@ -62,6 +62,7 @@ extract_function_info <- function(file_path) {
 #'
 #' This function is for internal package use only
 #' @keywords internal
+#' @importFrom openai create_chat_completion
 llmCall<-function(userquestion, model = "gpt-3.5-turbo")
 {
 sysprompt<-"You are the best R programmer. You will be given a user request to generate R function.
@@ -229,6 +230,7 @@ extract_llm_prompts <- function(file_path) {
 #'   to appending "_extracted.r" to the `file_path`.
 #' @return No return value, called for side effects.
 #' @export
+#' @importFrom openai create_chat_completion
 #' @examples
 #' example_file <- system.file("extdata", "defined_function.r", package = "RSorcery")
 #' if (file.exists(example_file)) {
