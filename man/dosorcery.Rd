@@ -2,14 +2,27 @@
 % Please edit documentation in R/utils.r
 \name{dosorcery}
 \alias{dosorcery}
-\title{Takes a file with a list of function definitions which are preceded
-by a comment line with what the function does.
-This function is exported and available to users.}
+\title{Performs sorcery on R code}
 \usage{
 dosorcery(file_path, output_file = NULL)
 }
+\arguments{
+\item{file_path}{Full path to where the file with function definitions is located.}
+
+\item{output_file}{The path for the output file. If not specified, it defaults
+to appending "_extracted.r" to the \code{file_path}.}
+}
+\value{
+No return value, called for side effects.
+}
 \description{
 Takes a file with a list of function definitions which are preceded
-by a comment line with what the function does.
-This function is exported and available to users.
+by a comment line with what the function does. It then processes these
+functions and outputs them to a specified file.
+}
+\examples{
+example_file <- system.file("extdata", "defined_function.r", package = "RSorcery")
+if (file.exists(example_file)) {
+  dosorcery(file_path = example_file, output_file = "mygeneratedfunctions.r")
+}
 }

@@ -69,7 +69,7 @@ Do not provide any other information just return the function code that does wha
 use the argument names with the types. The format of the result should start with 'RCode:[function name]' and provide
 only the functions no comments."
 
-chat.result<-create_chat_completion(
+chat.result<-openai::create_chat_completion(
   model = model,
   messages = list(
     list(
@@ -218,10 +218,22 @@ extract_llm_prompts <- function(file_path) {
   return(prompts)
 }
 
+#' Performs sorcery on R code
+#'
 #' Takes a file with a list of function definitions which are preceded
-#' by a comment line with what the function does.
-#' This function is exported and available to users.
+#' by a comment line with what the function does. It then processes these
+#' functions and outputs them to a specified file.
+#'
+#' @param file_path Full path to where the file with function definitions is located.
+#' @param output_file The path for the output file. If not specified, it defaults
+#'   to appending "_extracted.r" to the `file_path`.
+#' @return No return value, called for side effects.
 #' @export
+#' @examples
+#' example_file <- system.file("extdata", "defined_function.r", package = "RSorcery")
+#' if (file.exists(example_file)) {
+#'   dosorcery(file_path = example_file, output_file = "mygeneratedfunctions.r")
+#' }
 dosorcery <- function(file_path, output_file = NULL) {
 
   file_path_without_ext <- sub("\\.r$", "", file_path)
